@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%
+  }
+
+body {
+  background-color: #000;
+
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 100rem;
+    max-height: 100vh;
+    background-color: #0b131e;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    margin:  auto;
+}
+
+.dayDisplay {
+    display: grid;
+    /* grid-template-rows: 0.3fr 5fr 3fr 3fr; */
+    padding: 2rem;
+  } 
+
+          /* input section */
+
+.inputSec {
+    max-width: 75rem;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  
+.inputSec input {
+    width: 100%;
+    padding: 1rem 0.6rem;
+    border-radius: 16px;
+    background-color: #202b3b;
+    border: none;
+    font-size: 1.4rem;
+    color: #c9cdd2ff;
+  }
+
+.inputSec input::placeholder {
+    color: #c9cdd2ff;
+    font-size: 1.1rem;
+  }
+
+          /* blank section */
+
+.blank {
+    /* margin: 0 2rem; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    padding: 1.2rem;
+  }
+  
+.blank-info {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+.city {
+    margin-left: 3rem;
+  }
+  
+
+.blank-img {
+  width: 100%;
+    max-width: 14rem;
+    height: 14rem;
+    margin: 2.4rem  ;
+  }
+
+.city-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    color: #f0f1f1;
+  }
+  
+  
+.blank-rain {
+    font-size: 12px;
+    color: #7f868f;
+  }
+  
+.blank-temp {
+    font-size: 5.2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    color: #f0f1f1;
+  }
+
+              /* hourly data */
+
+.hourlyData {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.hourlyContent {
+    /* padding: 1rem 1.6rem 0; */
+  
+  }
+.hourlyDisplay {
+    margin-bottom: 1.6rem;
+    background-color: #202b3b;
+    border-radius: 24px;
+    padding: 1.2rem;
+  }
+  
+  .hourlyText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9298a1;
+    padding-bottom: 0.2rem;
+    margin-left: 0.2rem;
+  }
+  
+  
+.hour {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #9298a1;
+  }
+  
+  
+.hourContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    width: 100%;
+    padding-right: 0.5rem; /* Ensure space for the line */
+    box-sizing: border-box; 
+    /* opacity: 0; */
+  
+  }
+  
+  
+.hourContent:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  width: 2px;
+  height: 9.5rem;
+  background-color: #2b384d;
+ 
+}
+
+  .hourImg {
+    width: 4rem;
+  }
+
+  
+.temp {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d9dce0;
+  }
+  
+
+
+
+                 /* condition data */
+
+              
+.conditionData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.2rem;
+    column-gap: 3rem;
+    margin-top: 1rem;
+  }
+  
+  .airCondition {
+    background-color: #202b3b;
+    border-radius: 24px;
+  }
+
+  
+.conditions {
+  padding: 1.1rem 3rem 1.2rem ;
+}
+
+.conditionTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.conditionText {
+  
+  color: #9298a1;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.conditionBtn {
+  border: none;
+  padding: 0.4rem 1.2rem;
+  font-size: 20px;
+  border-radius: 100px;
+  background-color: #0095ff;
+  color: #e8f0f6;
+}
+
+.conditionFeature {
+  display: flex;
+  color: #9298a1;
+  margin-bottom: 1rem;
+}
+
+.feature-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.feature-data {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c4cad3;
+  margin-left: 2.1rem;
+}
+
+            /* weekly data */
+
+            
+.weekDisplay {
+  background-color: #202b3b;
+  border-radius: 24px;
+  margin: 2rem 2rem 2rem 0 ;
+}
+
+
+.weekSec {
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-rows: repeat(6, minmax(60px, 1fr));
+  row-gap: 1.2rem;
+  font-size: 1.2rem;
+}
+
+
+.week-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+.week-data:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 100%;
+  height: 2px;
+  background-color: #2b384d;
+}
+
+
+.weekly-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #9298a1;
+  margin: 3rem 2rem 0 2rem;
+}
+
+
+.week-img {
+  height: 3rem;
+}
+
+
+.week-day {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #9298a1;
+}
+.day-weather {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #bac1ca;
+}
+.week-temp {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #9298a1;
+}
+
+.week-temp span {
+  font-weight: 700;
+  color: #b0b7c0;
+}
